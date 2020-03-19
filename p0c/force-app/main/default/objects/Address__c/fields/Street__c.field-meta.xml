@@ -3,7 +3,7 @@
     <fullName>Street__c</fullName>
     <externalId>false</externalId>
     <label>Street</label>
-    <length>10</length>
+    <length>50</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

@@ -139,6 +139,7 @@
             </value>
         </inputAssignments>
         <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
         <name>CreateTheAccount</name>

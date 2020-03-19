@@ -3,14 +3,38 @@
     <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
-        <type>owner</type>
+        <submitter>manmgr@gmail.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>mhand123@yahoo.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>mman123@yahoo.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>vincent.espinoza@curious-panda-uzqtfe.com</submitter>
+        <type>user</type>
     </allowedSubmitters>
     <approvalPageFields>
         <field>Name</field>
         <field>Owner</field>
+        <field>DeliveryStatus__c</field>
+        <field>Insurance__c</field>
+        <field>Route__c</field>
+        <field>Address__c</field>
+        <field>CreatedBy</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>ta</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
         <assignedApprover>
             <approver>
                 <name>vincent.espinoza@curious-panda-uzqtfe.com</name>
@@ -21,8 +45,13 @@
         <entryCriteria>
             <criteriaItems>
                 <field>Mail__c.Insurance__c</field>
-                <operation>lessThan</operation>
+                <operation>greaterThan</operation>
                 <value>100</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Mail__c.Insurance__c</field>
+                <operation>lessThan</operation>
+                <value>1000</value>
             </criteriaItems>
         </entryCriteria>
         <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
@@ -31,14 +60,25 @@
     </approvalStep>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>gr</name>
+                <type>Alert</type>
+            </action>
+        </approvalActions>
         <assignedApprover>
             <approver>
-                <name>Approvers</name>
-                <type>queue</type>
+                <name>manmgr@gmail.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>vincent.espinoza@curious-panda-uzqtfe.com</name>
+                <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
         </assignedApprover>
         <entryCriteria>
+            <booleanFilter>1</booleanFilter>
             <criteriaItems>
                 <field>Mail__c.Insurance__c</field>
                 <operation>greaterThan</operation>
@@ -60,19 +100,7 @@
             <value>MISSING</value>
         </criteriaItems>
     </entryCriteria>
-    <finalApprovalActions>
-        <action>
-            <name>Discount_Approved</name>
-            <type>Alert</type>
-        </action>
-    </finalApprovalActions>
-    <finalApprovalRecordLock>true</finalApprovalRecordLock>
-    <finalRejectionActions>
-        <action>
-            <name>Discount_Not_Approved</name>
-            <type>Alert</type>
-        </action>
-    </finalRejectionActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>insurance</label>
     <recordEditability>AdminOnly</recordEditability>

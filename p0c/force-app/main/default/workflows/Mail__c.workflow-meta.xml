@@ -33,6 +33,47 @@
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</template>
     </alerts>
+    <alerts>
+        <fullName>dsfg</fullName>
+        <description>dsfg</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>mhand123@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mman123@yahoo.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vincent.espinoza@curious-panda-uzqtfe.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SupportCaseCreatedPhoneInquiries</template>
+    </alerts>
+    <alerts>
+        <fullName>gr</fullName>
+        <description>gr</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>vincent.espinoza@curious-panda-uzqtfe.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SupportEscalatedCaseNotification</template>
+    </alerts>
+    <alerts>
+        <fullName>ta</fullName>
+        <description>ta</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>vincent.espinoza@curious-panda-uzqtfe.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</template>
+    </alerts>
     <fieldUpdates>
         <fullName>rg</fullName>
         <field>Height__c</field>
